@@ -25,7 +25,8 @@ namespace WCF_Example
             inputMatr.Mass_b = massB.ToArray();
             calcservice.SumMatrixes(inputMatr);
             OutputMatrixes output = calcservice.SumMatrixes(inputMatr);
-
+            for (int j = 0; j < output.Mass_summ.Length; j+=2)
+                Console.Write(output.Mass_summ[j]);
             Console.ReadKey();
 
         }
