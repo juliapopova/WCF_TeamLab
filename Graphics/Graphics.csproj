@@ -95,6 +95,16 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WcfCalculationLib\WcfCalculationLib.csproj">
+      <Project>{7d5fae8e-07e8-4a17-bbf0-c70ec66d38de}</Project>
+      <Name>WcfCalculationLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WCF_Example\WCF_Example.csproj">
+      <Project>{09864603-a223-4fa4-96b5-dbf7e3587534}</Project>
+      <Name>WCF_Example</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
