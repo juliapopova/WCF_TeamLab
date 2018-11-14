@@ -12,6 +12,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WcfCalculationLib", "WcfCal
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Graphics", "Graphics\Graphics.csproj", "{C8376D3F-9BCD-4A22-AE1F-2BD399EA2F79}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lib_Thermo", "Lib_Thermo\Lib_Thermo.csproj", "{8B92BA29-E190-44EE-AF99-FE437BA42E44}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,6 +32,10 @@ Global
 		{C8376D3F-9BCD-4A22-AE1F-2BD399EA2F79}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C8376D3F-9BCD-4A22-AE1F-2BD399EA2F79}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C8376D3F-9BCD-4A22-AE1F-2BD399EA2F79}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8B92BA29-E190-44EE-AF99-FE437BA42E44}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B92BA29-E190-44EE-AF99-FE437BA42E44}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B92BA29-E190-44EE-AF99-FE437BA42E44}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B92BA29-E190-44EE-AF99-FE437BA42E44}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
