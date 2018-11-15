@@ -32,6 +32,7 @@ namespace Graphics {
 
             InitializeComponent();
 
+            //initial timer
             timer.Tick += new EventHandler(timerTick);
             timer.Interval = new TimeSpan(10);
 
@@ -44,7 +45,7 @@ namespace Graphics {
         }
 
         public void initial_plotting() {
-           
+
             for (int i = 0; i < n; i++) {
                 for (int j = 0; j < n; j++) {
                     rects[i, j] = new Rectangle();
@@ -62,7 +63,7 @@ namespace Graphics {
         }
 
         private void timerTick(object sender, EventArgs e) {
-                calculate();
+            calculate();
         }
 
         public static T[][] ToJagged<T>(T[,] mArray) {
@@ -102,19 +103,19 @@ namespace Graphics {
             double time = 0.2;
             double tau = 0.1;
             double h = 1;
-           
 
-            for (int j = 0; j < n; j++)
-                u[0, j] = 500;
 
-            for (int i = 0; i < n; i++)
-                u[i, n - 1] = 500;
+            for (int j = 0; j < n; j++) //left
+                u[0, j] = Convert.ToInt32(left.Text);
 
-            for (int j = 0; j < n; j++)
-                u[n - 1, j] = 300;
+            for (int i = 0; i < n; i++) //bottom
+                u[i, n - 1] = Convert.ToInt32(bottom.Text);
 
-            for (int i = 0; i < n; i++)
-                u[i, 0] = 300;
+            for (int j = 0; j < n; j++) //rigth
+                u[n - 1, j] = Convert.ToInt32(right.Text);
+
+            for (int i = 0; i < n; i++) //top
+                u[i, 0] = Convert.ToInt32(top.Text);
 
             CalcService calcservice = new CalcService();
             InputDate inputdate = new InputDate();
@@ -141,15 +142,13 @@ namespace Graphics {
                     color = Color.FromRgb((byte)clr, 0, (byte)(255 - (int)clr));
                     brush = new SolidColorBrush(color);
                     rects[i, j].Fill = brush;
-                    
+
                 }
             }
-
         }
         private void Start_Click(object sender, RoutedEventArgs e) {
             initial_plotting();
             timer.Start();
-
         }
     }
 }
