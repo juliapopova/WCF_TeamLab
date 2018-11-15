@@ -55,7 +55,5 @@ namespace Lib_Thermo
 
             return u;
         }
-
     }
-}
 }
