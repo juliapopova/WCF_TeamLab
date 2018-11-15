@@ -9,45 +9,56 @@ namespace WcfCalculationLib
 {
     // ПРИМЕЧАНИЕ. Команду "Переименовать" в меню "Рефакторинг" можно использовать для одновременного изменения имени интерфейса "IService1" в коде и файле конфигурации.
     [ServiceContract]
-    public interface ICaclcService
-    {
+    public interface ICalcService {
 
         [OperationContract]
-        OutputMatrixes SumMatrixes(InputMatrixes inputMatrixes);
+        OutputDate CulcTeploParal(InputDate inputMatrixes);
 
-        // TODO: Добавьте здесь операции служб
+        [OperationContract]
+        OutputDate CulcTeploPosl(InputDate inputMatrixes);
+
     }
     [DataContract]
-    public class InputMatrixes
-    {
-        double[] mass_a;
-        double[] mass_b;
+    public class InputDate {
+        double[][] mass_u;
+        double time;
+        double h;
+        double tau;
+
         [DataMember]
-        public double[] Mass_a
-        {
-            get { return mass_a; }
-            set { mass_a = value; }
+        public double[][] Mass_u {
+            get { return mass_u; }
+            set { mass_u = value; }
         }
-        public double[] Mass_b
-        {
-            get { return mass_b; }
-            set { mass_b = value; }
+
+        [DataMember]
+        public double Time {
+            get { return time; }
+            set { time = value; }
         }
+
+        [DataMember]
+        public double H {
+            get { return h; }
+            set { h = value; }
+        }
+
+        [DataMember]
+        public double Tau {
+            get { return tau; }
+            set { tau = value; }
+        }
+
     }
 
     [DataContract]
-    public class OutputMatrixes
-    {
-        double[] sum;
+    public class OutputDate {
+        double[][] culc;
 
         [DataMember]
-        public double[] Mass_summ
-        {
-            get { return sum; }
-            set { sum = value; }
+        public double[][] Culc_Teplo {
+            get { return culc; }
+            set { culc = value; }
         }
     }
-
-    
-    
 }
