@@ -8,7 +8,7 @@ namespace Lib_Thermo
 {
     public class Thermo
     {
-        public static double[,] PoslCulc(double[,] u, double time, double tau, double h) {
+        public  double[,] PoslCulc(double[,] u, double time, double tau, double h) {
             int a = u.GetLength(0);
             int b = u.GetLength(1);
             double[,] unew = new double[a, b];
