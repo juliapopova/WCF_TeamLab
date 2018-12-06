@@ -45,7 +45,8 @@ namespace Graphics {
         }
 
         public void initial_plotting() {
-
+            //это я типо попробовал написать коммент
+            //Бог даст получиться сделать pull requist
             for (int i = 0; i < n; i++) {
                 for (int j = 0; j < n; j++) {
                     rects[i, j] = new Rectangle();
