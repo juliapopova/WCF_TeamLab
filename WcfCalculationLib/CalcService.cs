@@ -40,7 +40,7 @@ namespace WcfCalculationLib
                 return mArray;
             }
 
-
+// Последовательный расчет
             public OutputDate CulcTeploPosl(InputDate inputDate) {
                 OutputDate mass_data = new OutputDate();
 
@@ -59,7 +59,7 @@ namespace WcfCalculationLib
 
 
             //Jagged array
-
+// Параллельный расчет
             public OutputDate CulcTeploParal(InputDate inputDate) {
                 OutputDate mass_data = new OutputDate();
 
